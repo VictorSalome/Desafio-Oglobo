@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <footer>
       <div className="bg-[#004861] flex h-16 items-center ">
-        <div className="ml-4">
+        <div>
           <button
             className="text-white p-3"
             onClick={handleMenuClick}
@@ -22,28 +22,28 @@ export const Header = () => {
           <div
             className={`${
               menuVisible ? "block" : "hidden"
-            } absolute bg-white shadow-md p-2 rounded`}
+            } absolute bg-[#004861] shadow-md p-2 rounded `}
           >
             <ul>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <a href="#" className="text-white  hover:text-gray-600">
                   Opção 1
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <a href="#" className="text-white hover:text-gray-600">
                   Opção 2
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <a href="#" className="text-white hover:text-gray-600">
                   Opção 3
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="text-white ml-12 w-40">
+        <div className="text-white ml-16 w-40">
           <img src={ImgHeader} alt="header-logo" />
         </div>
       </div>
