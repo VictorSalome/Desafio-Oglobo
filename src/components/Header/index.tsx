@@ -1,7 +1,6 @@
 import { useState } from "react";
 import ImgHeader from "../../assets/header-oglobo.svg";
 
-
 export const Header = () => {
   const [menuVisible, setMenuVisible] = useState(false);
 
