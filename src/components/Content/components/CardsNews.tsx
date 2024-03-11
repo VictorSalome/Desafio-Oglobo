@@ -46,11 +46,7 @@ export const MainFooterNewsCard = ({ news }: MainNewsCardProps) => {
       <div className="border border-y-gray-200 mt-2 mb-2"></div>
       <div className="flex ">
         <div className="">
-          <img
-            src={`assets/${news.image}`}
-            alt={news.image}
-            className=" p-3 "
-          />
+          <img src={`assets/${news.image}`} alt={news.image} className=" p-3" />
           <p className=" flex ml-4 font-semibold text-sm">{news.description}</p>
         </div>
 
@@ -72,7 +68,7 @@ export const MainBrasilNewsCard = ({ news }: MainNewsCardProps) => {
       <div className="border  border-y-gray-200 mt-2 mb-2"></div>
 
       <div className="flex ">
-        <div className="">
+        <div className="flex flex-col items-start w-full">
           <img
             src={`assets/${news.image}`}
             alt={news.image}
@@ -85,7 +81,6 @@ export const MainBrasilNewsCard = ({ news }: MainNewsCardProps) => {
 
         <div>
           <h3 className="ml-4 text-[#004861] font-bold">
-            {" "}
             {news.label.toLocaleUpperCase()}
           </h3>
           <h1 className="ml-4 text-xl font-bold">{news.title}</h1>
@@ -100,13 +95,9 @@ export const MainMundoNewsCard = ({ news }: MainNewsCardProps) => {
     <div>
       <div className="border  border-y-gray-200 mt-2 mb-2"></div>
 
-      <div className="flex ">
-        <div className="">
-          <img
-            src={`assets/${news.image}`}
-            alt={news.image}
-            className=" p-3  w-full"
-          />
+      <div className="flex">
+        <div className="flex flex-col items-start ">
+          <img src={`assets/${news.image}`} alt={news.image} className=" p-3" />
           <p className=" flex ml-4 font-semibold text-base">
             {news.description}
           </p>

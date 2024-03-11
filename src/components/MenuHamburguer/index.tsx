@@ -9,7 +9,7 @@ export const MenuHamburguer = () => {
   return (
     <div>
       <button
-        className="text-white p-3"
+        className="text-white p-3 md:text-2xl"
         onClick={handleMenuClick}
         aria-label="Menu"
       >
