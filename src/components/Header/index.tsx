@@ -1,53 +1,21 @@
-import { useState } from "react";
-import ImgHeader from "../../assets/header-oglobo.svg";
-
+import ImgHeader from "../../../public/assets/header-oglobo.svg";
+import { MenuHamburguer } from "../MenuHamburguer";
 
 export const Header = () => {
-  const [menuVisible, setMenuVisible] = useState(false);
-
-  const handleMenuClick = () => {
-    setMenuVisible(!menuVisible);
-  };
-
   return (
-    <footer>
-      <div className="bg-[#004861] flex h-16 items-center ">
-        <div className="ml-4">
-          <button
-            className="text-white p-3"
-            onClick={handleMenuClick}
-            aria-label="Menu"
-          >
-            &#9776;
-          </button>
-          <div
-            className={`${
-              menuVisible ? "block" : "hidden"
-            } absolute bg-white shadow-md p-2 rounded`}
-          >
-            <ul>
-              <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
-                  Opção 1
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
-                  Opção 2
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
-                  Opção 3
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="text-white ml-12 w-40">
-          <img src={ImgHeader} alt="header-logo" />
-        </div>
+    <header className="bg-[#004861] flex w-full md:h-20 ">
+      <div className="md:flex md:items-center">
+        <MenuHamburguer />
       </div>
-    </footer>
+
+      <div className="flex-grow flex justify-center items-center w-full ">
+        <img
+          src={ImgHeader}
+          alt="header-logo"
+          className="h-12 w-28 md:w-full"
+        />
+      </div>
+      <div className="w-14"></div>
+    </header>
   );
 };
