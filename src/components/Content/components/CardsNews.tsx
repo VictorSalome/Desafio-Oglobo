@@ -35,7 +35,7 @@ export const MainTopNewsCard = ({ news }: MainNewsCardProps) => {
           <img
             src={`assets/${news.image}`}
             alt={news.image}
-            className="p-3 md:w-full md:h-96"
+            className="p-3 md:w-96 md:h-72"
           />
         </div>
         <div>
